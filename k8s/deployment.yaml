@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sbadmin2
+  namespace: sbadmin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sbadmin2
+  template:
+    metadata:
+      labels:
+        app: sbadmin2
+    spec:
+      containers:
+        - name: sbadmin2
+          image: gedanghijau25/sbadmin2:latest
+          ports:
+            - containerPort: 80
