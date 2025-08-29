@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sbadmin2-ingress
+  namespace: sbadmin
+spec:
+  rules:
+    - host: sbadmin.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: sbadmin2-service
+                port:
+                  number: 80
