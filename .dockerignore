@@ -1,0 +1,7 @@
+# Jangan ikutkan file/folder yang tidak perlu ke dalam image
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+README.md
+node_modules
